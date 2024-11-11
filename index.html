@@ -81,40 +81,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="home.html">
-            <img src="images/logo.png" alt="One Piece Logo" style="width: 60px; height: 60px;">
-            <span class="ms-3 text-white" style="font-size: 1.5rem;">ONE PIECE</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="logandreg.html">
-                  <i class="fa-solid fa-house px-2"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="whoweare.html"><i class="fa-regular fa-address-card px-2"></i>About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="contact.html"><i class="fa-regular fa-address-book px-2"></i>Contact us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="profile.html"><i class="fa-regular fa-address-card px-2"></i>Profile</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              <a href="logout.html" class="text-decoration-none text-white">
-                <i class="fa-solid fa-right-from-bracket px-2"></i>Logout
-              </a>
-            </span>
-          </div>
-        </div>
-      </nav>
+
 
     <div class="container form-container" id="login-form">
         <h2>Welcome Back, Pirate!</h2>
@@ -155,16 +122,44 @@
     </div>
 
     <script>
-        function showRegister() {
-            document.getElementById('login-form').style.display = 'none';
-            document.getElementById('register-form').style.display = 'block';
-        }
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
 
-        function showLogin() {
-            document.getElementById('register-form').style.display = 'none';
-            document.getElementById('login-form').style.display = 'block';
+    
+    document.querySelector('.loading-overlay').style.display = 'flex';
+
+    
+    setTimeout(function() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var errorMessage = document.getElementById('error-message');
+
+        if (username === "user" && password === "pass") {
+            
+            if (errorMessage) {
+                errorMessage.textContent = "Login successful!";
+                errorMessage.style.color = "white"; 
+            }
+
+            
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 1000); 
+        } else {
+            
+            if (errorMessage) {
+
+                errorMessage.textContent = "Invalid username or password!";
+                errorMessage.style.color = "red"; 
+            }
+            
+            document.querySelector('.loading-overlay').style.display = 'none';
         }
+    }, 2000); 
+});
+        
     </script>
+    
 
 </body>
 </html>
