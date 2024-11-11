@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+        body {
+            background-image:url('images/wall.jpg');
+            background-size: cover;
+            font-family: 'Pirata One', cursive;
+            color: #ffd700;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 400px;
+            margin-top: 100px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px 5px #ffd700;
+            animation: fadeIn 1s ease;
+        }
+
+        h2, p {
+            text-align: center;
+            color: #ffd700;
+        }
+
+        .form-control {
+            background-color: #1a1a1a;
+            color: #ffd700;
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 8px #ffd700;
+        }
+
+        .btn-custom {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffca2c;
+        }
+
+        .toggle-link {
+            color: #ffd700;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        #register-form {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .form-container {
+            animation: slideUp 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo.png" alt="One Piece Logo" style="width: 60px; height: 60px;">
+            <span class="ms-3 text-white" style="font-size: 1.5rem;">ONE PIECE</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="logandreg.html">
+                  <i class="fa-solid fa-house px-2"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="whoweare.html"><i class="fa-regular fa-address-card px-2"></i>About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contact.html"><i class="fa-regular fa-address-book px-2"></i>Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="profile.html"><i class="fa-regular fa-address-card px-2"></i>Profile</a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <a href="logout.html" class="text-decoration-none text-white">
+                <i class="fa-solid fa-right-from-bracket px-2"></i>Logout
+              </a>
+            </span>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container form-container" id="login-form">
+        <h2>Welcome Back, Pirate!</h2>
+        <p>Log in to continue your adventure!</p>
+        <form>
+            <div class="mb-3">
+                <label for="login-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="login-email" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+                <label for="login-password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login-password" placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-custom w-100">Login</button>
+            <p class="mt-3 text-center">Not a member? <span class="toggle-link" onclick="showRegister()">Join the crew!</span></p>
+        </form>
+    </div>
+
+    <div class="container form-container" id="register-form" style="display: none;">
+        <h2>Join the Crew!</h2>
+        <p>Become part of the One Piece Fan Club</p>
+        <form>
+            <div class="mb-3">
+                <label for="register-username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="register-username" placeholder="Choose a username">
+            </div>
+            <div class="mb-3">
+                <label for="register-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="register-email" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+                <label for="register-password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="register-password" placeholder="Create a password">
+            </div>
+            <button type="submit" class="btn btn-custom w-100">Register</button>
+            <p class="mt-3 text-center">Already a member? <span class="toggle-link" onclick="showLogin()">Log in here</span></p>
+        </form>
+    </div>
+
+    <script>
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
