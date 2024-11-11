@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Character Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="fontawesome/js/all.js"></script>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+        body {
+            background-color: #2c0c0c;
+            color: white;
+            font-family: 'Pirata One', cursive; 
+        }
+
+        .navbar {
+            background-color: #000000;
+        }
+
+        .card {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 2px solid #c1a51e;
+            background-color: #1c1c3c;
+        }
+        .card-body {
+            position: relative;
+            padding: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #c1a51e;
+        }
+        .character-name {
+            color: #f5de12;
+            font-size: 24px;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #c1a51e;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="logandreg.html">
+            <img src="images/logo.png" style="width: 60px; height: 60px; border-radius: 50%;">
+            <span class="ms-2">ONE PIECE</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="home.html" class="nav-link" aria-current="page"><i class="fa-solid fa-house px-2"></i>Home</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="whoweare.html"><i class="fa-regular fa-address-card px-2"></i>About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="Service_detail.html"><i class="fa-regular fa-address-book px-2"></i>Service Detail</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="contact.html"><i class="fa-regular fa-address-book px-2"></i>Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="Gallery.html.html"><i class="fa-regular fa-address-book px-2"></i>Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="testimonials.html"><i class="fa-regular fa-address-book px-2"></i>Testimonial</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="profile.html"><i class="fa-regular fa-address-book px-2"></i>Profile</a>
+                  </li>
+            </ul>
+            <span class="navbar-text">
+                <a href="logout.html" class="text-decoration-none text-white">
+                  <i class="fa-solid fa-right-from-bracket px-2"></i>Logout
+                </a>
+            </span>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container" style="margin-top: 80px;">
+        <h1 class="text-center my-4" style="color: #f5de12;">One Piece Character Gallery</h1>
+        <p class="text-center mb-5">Explore the adventurous world of One Piece and meet the beloved characters that make this journey unforgettable.</p>
+
+        <div class="row">
+  
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/dakoluf.png" alt="Monkey D. Luffy">
+                    <div class="card-body text-center">
+                        <h5 class="character-name">Monkey D. Luffy</h5>
+                        <p class="text-white">Captain of the Straw Hat Pirates, Luffy dreams of becoming the Pirate King and is known for his boundless courage and rubber powers.</p>
+                        <a href="https://onepiece.fandom.com/wiki/Monkey_D._Luffy" class="text-warning">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/roronoa.png" alt="Roronoa Zoro">
+                    <div class="card-body text-center">
+                        <h5 class="character-name">Roronoa Zoro</h5>
+                        <p class="text-white">The master swordsman and Straw Hat crew member, Zoro is dedicated to becoming the world’s greatest swordsman.</p>
+                        <a href="https://onepiece.fandom.com/wiki/Roronoa_Zoro" class="text-warning">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/nami.png" alt="Nami">
+                    <div class="card-body text-center">
+                        <h5 class="character-name">Nami</h5>
+                        <p class="text-white">The talented navigator of the Straw Hats, Nami’s dream is to map the entire world, and she’s known for her weather-controlling staff.</p>
+                        <a href="https://onepiece.fandom.com/wiki/Nami" class="text-warning">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/sanji.png" alt="Sanji">
+                    <div class="card-body text-center">
+                        <h5 class="character-name">Sanji</h5>
+                        <p class="text-white">The Straw Hat's cook, Sanji dreams of finding the All Blue, a legendary sea with fish from every ocean.</p>
+                        <a href="https://onepiece.fandom.com/wiki/Sanji" class="text-warning">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/usop.png" alt="Usopp">
+                    <div class="card-body text-center">
+                        <h5 class="character-name">Usopp</h5>
+                        <p class="text-white">A skilled marksman and strategist, Usopp is the Straw Hat's sniper, with a dream to become a brave warrior of the sea.</p>
+                        <a href="https://onepiece.fandom.com/wiki/Usopp" class="text-warning">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/choper.png" alt="Tony Tony Chopper">
+                    <div class="card-body text-center">
+                        <h5 class="character-name">Tony Tony Chopper</h5>
+                        <p class="text-white">The crew’s doctor and a reindeer with a human form, Chopper dreams of becoming a doctor who can cure any illness.</p>
+                        <a href="https://onepiece.fandom.com/wiki/Tony_Tony_Chopper" class="text-warning">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 One Piece Fans | Designed by <a href="#" class="text-warning">Jhonn Lee Maning</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
